@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{D08DE2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sas.Domain", "sas.Domain\sas.Domain.csproj", "{454DE3F3-93A8-4E7D-A309-E01726BBA521}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{6E30029A-1814-4F42-A477-E6B9F11B57D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sas.Infrastructure", "sas.Infrastructure\sas.Infrastructure.csproj", "{D79CBC60-C3C2-47D9-9E4C-28456F98538B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,10 @@ Global
 		{454DE3F3-93A8-4E7D-A309-E01726BBA521}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{454DE3F3-93A8-4E7D-A309-E01726BBA521}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{454DE3F3-93A8-4E7D-A309-E01726BBA521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D79CBC60-C3C2-47D9-9E4C-28456F98538B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79CBC60-C3C2-47D9-9E4C-28456F98538B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79CBC60-C3C2-47D9-9E4C-28456F98538B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79CBC60-C3C2-47D9-9E4C-28456F98538B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +63,7 @@ Global
 		{2A6A12FC-CA29-4376-BD20-8C210AB80C5A} = {2A1C3AED-EFB2-4DF6-A614-13C467168B34}
 		{9E5A02E5-4E3E-42FB-90D6-386FA2DA0CE0} = {2A1C3AED-EFB2-4DF6-A614-13C467168B34}
 		{454DE3F3-93A8-4E7D-A309-E01726BBA521} = {D08DE25D-2584-4F70-AD4E-0BE2E2684AA9}
+		{D79CBC60-C3C2-47D9-9E4C-28456F98538B} = {6E30029A-1814-4F42-A477-E6B9F11B57D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B2548064-AB39-427E-AF5F-14AC5B1091BF}

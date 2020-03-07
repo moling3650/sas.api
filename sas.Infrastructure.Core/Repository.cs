@@ -47,4 +47,41 @@ namespace sas.Infrastructure.Core
         }
     }
 
+
+    public abstract class Repository<TEntity, TKey, TDbContext> : Repository<TEntity, TDbContext>, IRepository<TEntity, TKey> where TEntity : Entity<TKey>, IAggregateRoot where TDbContext : EFContext
+    {
+        public Repository(TDbContext context) : base(context)
+        {
+        }
+
+        public virtual bool Delete(TKey id)
+        {
+            var entity = DbContext.Find<TEntity>(id);
+            if (entity == null)
+                return false;
+
+            DbContext.Remove(entity);
+            return true;
+        }
+
+        public virtual async Task<bool> DeleteAsync(TKey id, CancellationToken cancellationToken = default)
+        {
+            var entity = await DbContext.FindAsync<TEntity>(id, cancellationToken);
+            if (entity == null)
+                return false;
+
+            DbContext.Remove(entity);
+            return true;
+        }
+
+        public virtual TEntity Get(TKey id)
+        {
+            return DbContext.Find<TEntity>(id);
+        }
+
+        public virtual async Task<TEntity> GetAsync(TKey id, CancellationToken cancellationToken = default)
+        {
+            return await DbContext.FindAsync<TEntity>(id, cancellationToken);
+        }
+    }
 }

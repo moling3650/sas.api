@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\sas.Domain.Abstractions\sas.Domain.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>

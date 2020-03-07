@@ -1,14 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using sas.api.Extensions;
+using sas.Infrastructure;
 
 namespace sas.api
 {
@@ -25,11 +21,26 @@ namespace sas.api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddMediatRServices();
+            services.AddMySqlDomainContext(Configuration.GetValue<string>("Mysql"));
+            services.AddRepositories();
+            services.AddEventBus(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                var dc = scope.ServiceProvider.GetService<DomainContext>();
+                if (env.IsDevelopment())
+                {
+                    dc.Database.EnsureDeleted();
+                }
+                dc.Database.EnsureCreated();
+            }
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

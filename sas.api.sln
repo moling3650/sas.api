@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sas.Core", "sas.Core\sas.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sas.Domain.Abstractions", "sas.Domain.Abstractions\sas.Domain.Abstractions.csproj", "{2A6A12FC-CA29-4376-BD20-8C210AB80C5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sas.Infrastructure.Core", "sas.Infrastructure.Core\sas.Infrastructure.Core.csproj", "{9E5A02E5-4E3E-42FB-90D6-386FA2DA0CE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{2A6A12FC-CA29-4376-BD20-8C210AB80C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A6A12FC-CA29-4376-BD20-8C210AB80C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A6A12FC-CA29-4376-BD20-8C210AB80C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E5A02E5-4E3E-42FB-90D6-386FA2DA0CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5A02E5-4E3E-42FB-90D6-386FA2DA0CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5A02E5-4E3E-42FB-90D6-386FA2DA0CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5A02E5-4E3E-42FB-90D6-386FA2DA0CE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{3E300A01-55B5-42B9-89BC-10709367AA1B} = {528084B1-C09D-43FA-84F8-5D8DC8AF486F}
 		{636C3E70-5A1B-40AC-8293-DA18E56EC27F} = {2A1C3AED-EFB2-4DF6-A614-13C467168B34}
 		{2A6A12FC-CA29-4376-BD20-8C210AB80C5A} = {2A1C3AED-EFB2-4DF6-A614-13C467168B34}
+		{9E5A02E5-4E3E-42FB-90D6-386FA2DA0CE0} = {2A1C3AED-EFB2-4DF6-A614-13C467168B34}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B2548064-AB39-427E-AF5F-14AC5B1091BF}
